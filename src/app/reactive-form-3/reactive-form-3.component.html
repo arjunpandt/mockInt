@@ -1,0 +1,12 @@
+<h1>Reactive Form</h1>
+
+<form [formGroup]="myForm" (ngSubmit)="submitReactiveForm()">
+    <input type="text" formControlName="name">
+    <button type="submit">filteredData</button>
+    <p *ngFor="let user of [1,2,3]">{{'test' | demoPipe}}</p>
+</form>
+<h2>Template Driven Form</h2>
+<form #temForm="ngForm" (ngSubmit)="submitForm(temForm)">
+    <input type="text" name="ngName" [(ngModel)]="ngName">
+    <button type="submit">submit</button>
+</form>

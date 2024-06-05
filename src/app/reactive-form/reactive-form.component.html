@@ -1,0 +1,6 @@
+<form [formGroup]="myForm">
+        <input formControlName="name" placeholder="Your name">
+        <a [routerLink]="['/routePath']">routing</a> <br>
+        <a [routerLink]="['secondRoute','test']" [queryParams]="{id2: '1'}">second Route</a>
+        <button (click)="getId()">Get ID</button>
+</form>

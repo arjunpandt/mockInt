@@ -1,0 +1,13 @@
+<p>reactive-form-demo works!</p>
+<form  [formGroup]="myform" (ngSubmit)="submitForm()">
+    <label for="name">Name</label>
+<input type="text" name="name" formControlName="name">
+<label for="number">Number</label>
+<input type="number" name="moNumber" formControlName="moNumber">
+<label for="address">Address</label>
+<textarea name="address" formControlName="address"></textarea>
+<button type="submit">Submit Form</button>
+</form>
+<p [ngClass]="{true:'redColor'}" *ngFor="let name of testDat">
+{{name['name']}}
+</p>
